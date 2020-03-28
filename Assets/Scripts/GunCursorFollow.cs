@@ -12,6 +12,13 @@ public class GunCursorFollow : MonoBehaviour
         equiptGun = Instantiate(gun, transform.position, transform.rotation);
     }
 
+    public void Create()
+    {
+        //create a gun in game 
+        Destroy(equiptGun);
+        equiptGun = Instantiate(gun, transform.position, transform.rotation);
+    }
+
     // Update is called once per frame
     void Update()
     {

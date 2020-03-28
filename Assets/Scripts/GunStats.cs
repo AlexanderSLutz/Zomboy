@@ -10,4 +10,7 @@ public class GunStats : MonoBehaviour
     //All gun stats go here
     public float fireRate = 10f;
     public bool semiAuto = false;
+    public GameObject bulletType;
 }
+
+

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1861674487326850793}
   - component: {fileID: 2115580281}
   m_Layer: 0
-  m_Name: Rifle
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dbd81b2754848514799da7d8d4f23d70, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65205e88ad577d14fbdf985e81851c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 5000
-  semiAuto: 0
+  fireRate: 50
+  semiAuto: 1
   bulletType: {fileID: 1776415466023069410, guid: ec019998812799944af1f5081c40c83e,
     type: 3}
