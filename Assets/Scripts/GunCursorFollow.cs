@@ -31,12 +31,12 @@ public class GunCursorFollow : MonoBehaviour
         //////////////////////////////////////////////////////
         if (direction.x >= 0)
         {
-            equiptGun.gameObject.transform.localScale = new Vector3(0.15f, 0.15f, 1f);//flips the gun appropriately
+            equiptGun.gameObject.transform.localScale = new Vector3(.5f, .5f, 1f);//flips the gun appropriately
             rotation.eulerAngles = new Vector3(0, 0, (Mathf.Rad2Deg * zrot));
         }
         else
         {
-            equiptGun.gameObject.transform.localScale = new Vector3(0.15f, -0.15f, 1f);//flips the gun appropriately
+            equiptGun.gameObject.transform.localScale = new Vector3(.5f, -.5f, 1f);//flips the gun appropriately
             rotation.eulerAngles = new Vector3(0, 0, Mathf.Rad2Deg * zrot + 180);
         }
         //////////////////////////////////////////////////////
