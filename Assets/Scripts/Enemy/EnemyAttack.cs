@@ -14,11 +14,11 @@ public class EnemyAttack : MonoBehaviour
         Vector3 enemyPos = transform.position;
         float distance = Vector3.Magnitude(playerPos - enemyPos);
 
-        Debug.Log(distance);
+        //Debug.Log(distance);
 
         if (distance < gameObject.GetComponent<EnemyStats>().attackRange)
         {
-            player.GetComponent<PlayerStats>().playerHealth -= gameObject.GetComponent<EnemyStats>().enemyDamage;
+            player.GetComponent<PlayerStats>().currentPlayerHealth -= gameObject.GetComponent<EnemyStats>().enemyDamage;
         }
     }
 }
