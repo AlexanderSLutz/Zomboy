@@ -9,6 +9,8 @@ public class GameStats : MonoBehaviour
     private Camera cam; //Used for in game mouse locating
     public Vector3 inGameMousePosition = new Vector3(0,0,0); //stores the position of the mouse in game, usefull for player controls
     private bool statsHub = false; //Used to active th statsHub in game
+    GUIStyle guiStyle = new GUIStyle();
+
 
     void Start()
     {
@@ -44,11 +46,12 @@ public class GameStats : MonoBehaviour
         //Displays stats hub on screen if toggled on
         if (statsHub)
         {
-            GUILayout.BeginArea(new Rect(20, 20, 250, 120));
-            /*Screen Pixels*/GUILayout.Label("Screen pixels: " + cam.pixelWidth + ":" + cam.pixelHeight);
-            /*Mouse Position*/GUILayout.Label("Mouse position: " + mousePos);
-            /*In Game Mouse Position*/GUILayout.Label("World position: " + inGameMousePosition.ToString("F3"));
-            /*Frame Rate*/GUILayout.Label("Frame rate: " + (int)(1.0f / Time.smoothDeltaTime));
+            guiStyle.fontSize = 40;
+            GUILayout.BeginArea(new Rect(1220, 20, 1920, 320));
+            /*Screen Pixels*/GUILayout.Label("Screen pixels: " + cam.pixelWidth + ":" + cam.pixelHeight, guiStyle);
+            /*Mouse Position*/GUILayout.Label("Mouse position: " + mousePos, guiStyle);
+            /*In Game Mouse Position*/GUILayout.Label("World position: " + inGameMousePosition.ToString("F3"), guiStyle);
+            /*Frame Rate*/GUILayout.Label("Frame rate: " + (int)(1.0f / Time.smoothDeltaTime), guiStyle);
             GUILayout.EndArea();
         }
     }
