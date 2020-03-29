@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasKnockback: 1
-  fireRate: 1
+  fireRate: 2
   semiAuto: 1
   bulletType: {fileID: 1776415466023069410, guid: ec019998812799944af1f5081c40c83e,
     type: 3}
-  knockbackFactor: 500
+  knockbackFactor: 5000
