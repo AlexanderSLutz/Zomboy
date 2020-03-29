@@ -11,6 +11,7 @@ public class EnemyStats : MonoBehaviour
     public int agroRange = 10;
     public int enemyDamage = 10;
     public int attackRange = 1;
+    public int attackSpeed = 1;
 
 
     void Update()
