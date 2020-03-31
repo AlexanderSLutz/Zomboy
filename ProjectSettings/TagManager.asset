@@ -51,3 +51,6 @@ TagManager:
   - name: Guns
     uniqueID: 3228117453
     locked: 0
+  - name: In Game Ui
+    uniqueID: 3585131615
+    locked: 0

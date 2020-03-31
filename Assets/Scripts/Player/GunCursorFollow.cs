@@ -16,7 +16,7 @@ public class GunCursorFollow : MonoBehaviour
     {
         //create a gun in game 
         Destroy(equiptGun);
-        equiptGun = Instantiate(gun, transform.position, transform.rotation);
+        equiptGun = Instantiate(gun,new Vector3 (-10000,-10000,1), transform.rotation);
     }
 
     // Update is called once per frame

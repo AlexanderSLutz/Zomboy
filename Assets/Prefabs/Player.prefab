@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: 1352615989}
   - component: {fileID: 4781215374080001212}
   - component: {fileID: 1352615985}
+  - component: {fileID: 1352615992}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,8 +124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8356457760891668227}
   jumpHeight: 15
-  moveSpeed: 8
-  animation: {fileID: 8356457760891668229}
   gameManager: {fileID: 0}
   backwardsSpeedFactor: 0.8
   facingright: 1
@@ -202,3 +201,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.072693825, y: -0.35048962}
   m_Size: {x: 1.0967064, y: 1.3615208}
   m_Direction: 0
+--- !u!114 &1352615992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8356457760891668255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2556d200d83eacd42835d4a19d8fe154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPlayerHealth: 100
+  maxPlayerHealth: 100
+  moveSpeed: 20

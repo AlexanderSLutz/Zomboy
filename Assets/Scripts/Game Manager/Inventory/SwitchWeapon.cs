@@ -40,9 +40,6 @@ public class SwitchWeapon : MonoBehaviour
                 }
                 break;
         }
-    }
-    void Update()
-    {
-        
+        gameObject.GetComponent<InventorySystem>().UpdateSlot();
     }
 }
