@@ -95,9 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasKnockback: 1
-  fireRate: 30
+  fireRate: 10
   semiAuto: 0
   bulletType: {fileID: 1776415466023069410, guid: ec019998812799944af1f5081c40c83e,
     type: 3}
   knockbackFactor: 10
-  gunDamage: 5
+  gunDamage: 20

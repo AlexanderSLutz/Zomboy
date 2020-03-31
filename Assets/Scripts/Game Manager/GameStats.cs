@@ -16,6 +16,8 @@ public class GameStats : MonoBehaviour
     {
         //establishes a reference to the main camera
         cam = Camera.main;
+
+        Physics2D.IgnoreLayerCollision(10, 10);
     }
 
     //When the "i" key is pressed the status of the stats hub toggles

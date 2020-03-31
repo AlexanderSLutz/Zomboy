@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 7568637001853112730}
   - component: {fileID: -410974225967144165}
   - component: {fileID: -3232643058710083737}
-  - component: {fileID: -3425675367229892124}
-  m_Layer: 0
+  - component: {fileID: 991729240}
+  - component: {fileID: 991729241}
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: baa0c643131554ff99574059ec7da1cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,10 +103,10 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 839f0652cea88f241be91a99f84618eb, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7568637001853112730
 MonoBehaviour:
@@ -119,12 +120,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ede33ff8a9f5e24b94f93e41225e8ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 250
+  maxHealth: 100
   movementSpeed: 5
   agroRange: 10
-  enemyDamage: 10
-  attackRange: 1
+  enemyDamage: 20
+  attackRange: 2
   attackSpeed: 1
+  healthBar: {fileID: 1545938824625627608, guid: f35aaffe09f8bea488382114ad2ff51c,
+    type: 3}
 --- !u!114 &-410974225967144165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,14 +151,40 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 7568637001853112735}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 839f0652cea88f241be91a99f84618eb, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014672853, y: -0.20135082}
-  m_Size: {x: 1.9796605, y: 1.051252}
+  m_Offset: {x: -0.15816824, y: -0.24023981}
+  m_Size: {x: 1.6339808, y: 1.1290318}
   m_Direction: 1
---- !u!114 &-3425675367229892124
+--- !u!61 &991729240
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568637001853112735}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 839f0652cea88f241be91a99f84618eb, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2406342, y: -0.18047619}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.25, y: 1.75}
+    newSize: {x: 0.35, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7687316, y: 1.1484127}
+  m_EdgeRadius: 0
+--- !u!114 &991729241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
