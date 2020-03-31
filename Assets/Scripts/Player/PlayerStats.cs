@@ -6,5 +6,6 @@ public class PlayerStats : MonoBehaviour
 {
     public int currentPlayerHealth = 100;
     public int maxPlayerHealth = 100;
+    public int moveSpeed = 100;
 
 }

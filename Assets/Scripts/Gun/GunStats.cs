@@ -13,6 +13,7 @@ public class GunStats : MonoBehaviour
     public bool semiAuto = false;
     public GameObject bulletType;
     public float knockbackFactor = 10f;
+    public int gunDamage = 100;
 
 }
 

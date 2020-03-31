@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
 {
     //all bullet stats go here
     //DO NOT put gun stats(i.e. fire rate) here)
-    public int Damage = 10;
+    //public int Damage = 10;
     public float bulletSpeed = 1f;
     public float despawnTime = 2f;
 
@@ -29,10 +29,10 @@ public class Bullet : MonoBehaviour
         //  if an enemy is hit call that enemys WasHit function
         if (collisionInfo.gameObject.tag == "Enemy")
         {
-            FindObjectOfType<BulletHit>().gameObject.GetComponent<BulletHit>().WasHit(collisionInfo.gameObject, Damage);
+            FindObjectOfType<BulletHit>().gameObject.GetComponent<BulletHit>().WasHit(collisionInfo.gameObject, FindObjectOfType<GunCursorFollow>().equiptGun.GetComponent<GunStats>().gunDamage);
         }
-        //destroy the bullet upon collision
         Destroy(gameObject);
     }
   
 }
+        //destroy the bullet upon collision

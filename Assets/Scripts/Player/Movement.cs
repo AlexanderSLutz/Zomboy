@@ -5,8 +5,6 @@ public class Movement : MonoBehaviour
 
     public Rigidbody2D rb;
     public int jumpHeight = 100;
-    public int moveSpeed = 100;
-    public Animator animation;
     public GameObject gameManager;
     public float backwardsSpeedFactor = .8f;
     
@@ -15,9 +13,9 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        int moveSpeed = gameObject.GetComponent<PlayerStats>().moveSpeed;
         Vector3 mousePosition = gameManager.GetComponent<GameStats>().inGameMousePosition;
-        animation.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        //GetComponent<Animation>().SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
         if (Input.GetKey("space"))
         {
